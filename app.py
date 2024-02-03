@@ -145,21 +145,21 @@ def main():
         # Show the plot in Streamlit
         st.pyplot(fig)
 
-        #wordcloud
-        # Filter DataFrame to include only rows where arrest is True
-        arrest_true_df = df[df['Arrest'] == True]
+        # #wordcloud
+        # # Filter DataFrame to include only rows where arrest is True
+        # arrest_true_df = df[df['Arrest'] == True]
 
-        # Extract LocationDescription column
-        location_description = arrest_true_df['LocationDescription']
+        # # Extract LocationDescription column
+        # location_description = arrest_true_df['LocationDescription']
 
-        # Join all location descriptions into a single string
-        text = ' '.join(location_description)
+        # # Join all location descriptions into a single string
+        # text = ' '.join(location_description)
 
-        # Generate word cloud
-        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
+        # # Generate word cloud
+        # wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
 
-        # Display the generated word cloud image in Streamlit
-        st.image(wordcloud.to_array(), caption='Word Cloud of Location Descriptions with True Arrests')
+        # # Display the generated word cloud image in Streamlit
+        # st.image(wordcloud.to_array(), caption='Word Cloud of Location Descriptions with True Arrests')
 
 if __name__ == '__main__':
     main()
